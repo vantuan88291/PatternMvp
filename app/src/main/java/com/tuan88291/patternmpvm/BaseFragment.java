@@ -38,7 +38,6 @@ public abstract class BaseFragment extends Fragment {
 
     protected abstract View setView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
     protected abstract void viewCreated(View view, Bundle savedInstanceState);
-
     protected MainActivity mContext() {
         return this.context;
     }

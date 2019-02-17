@@ -23,6 +23,7 @@ public class HomeFragment extends BaseFragment {
     @Override
     protected void viewCreated(View view, Bundle savedInstanceState) {
 
+        binding.title.setText("hello");
         Toast.makeText(mContext(), "test", Toast.LENGTH_SHORT).show();
     }
 }
