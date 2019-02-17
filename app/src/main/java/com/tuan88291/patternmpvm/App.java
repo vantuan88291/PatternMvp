@@ -1,20 +1,11 @@
 package com.tuan88291.patternmpvm;
-
+import com.tuan88291.commonlib.BaseApp;
 import androidx.multidex.MultiDex;
-import androidx.multidex.MultiDexApplication;
-
-public class App extends MultiDexApplication {
-
-    private static App instance;
-
-    public static App getInstance() {
-        return instance;
-    }
+public class App extends BaseApp {
 
     @Override
     public void onCreate() {
         super.onCreate();
-        instance = this;
         MultiDex.install(this);
     }
 }

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>s</data>
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
@@ -21,7 +24,9 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <include layout="@layout/content_main" />
+        <include
+            android:id="@+id/contentMain"
+            layout="@layout/content_main" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
@@ -32,3 +37,4 @@
             app:srcCompat="@android:drawable/ic_dialog_email" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

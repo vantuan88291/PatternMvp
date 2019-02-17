@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.tuan88291.commonlib.Utils.SharedPrefs;
 import com.tuan88291.patternmpvm.BaseFragment;
 import com.tuan88291.patternmpvm.R;
 import com.tuan88291.patternmpvm.databinding.HomeFragmentBinding;
@@ -23,7 +24,7 @@ public class HomeFragment extends BaseFragment {
     @Override
     protected void viewCreated(View view, Bundle savedInstanceState) {
 
-        binding.title.setText("hello");
+        binding.title.setText(SharedPrefs.getInstance().get("test", String.class));
         Toast.makeText(mContext(), "test", Toast.LENGTH_SHORT).show();
     }
 }
