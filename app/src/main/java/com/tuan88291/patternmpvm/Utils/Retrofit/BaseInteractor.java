@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.Utils.retrofit;
+package com.tuan88291.patternmpvm.Utils.Retrofit;
 
 public abstract class BaseInteractor {
 

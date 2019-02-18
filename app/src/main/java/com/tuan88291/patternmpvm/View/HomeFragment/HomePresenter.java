@@ -4,10 +4,10 @@ import android.content.Context;
 import android.widget.Toast;
 
 import com.tuan88291.patternmpvm.Model.CommonData.CommonData;
-import com.tuan88291.patternmpvm.Utils.retrofit.ApiUtil;
-import com.tuan88291.patternmpvm.Utils.retrofit.BaseInteractor;
-import com.tuan88291.patternmpvm.Utils.retrofit.CallApi;
-import com.tuan88291.patternmpvm.Utils.retrofit.CustomCallBack.BaseRetrofit;
+import com.tuan88291.patternmpvm.Utils.Retrofit.ApiUtil;
+import com.tuan88291.patternmpvm.Utils.Retrofit.BaseInteractor;
+import com.tuan88291.patternmpvm.Utils.Retrofit.CallApi;
+import com.tuan88291.patternmpvm.Utils.Retrofit.CustomCallBack.BaseRetrofit;
 
 import retrofit2.Response;
 
