@@ -1,8 +1,8 @@
-package com.tuan88291.patternmpvm.utils.retrofit;
+package com.tuan88291.patternmpvm.data.service;
 
 
-import com.tuan88291.patternmpvm.model.commondata.CommonData;
-import com.tuan88291.patternmpvm.model.commondata.Data;
+import com.tuan88291.patternmpvm.data.model.CommonData;
+import com.tuan88291.patternmpvm.data.model.Data;
 
 import retrofit2.Call;
 import retrofit2.http.FormUrlEncoded;

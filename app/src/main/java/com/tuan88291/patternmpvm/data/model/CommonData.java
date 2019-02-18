@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.model.commondata;
+package com.tuan88291.patternmpvm.data.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

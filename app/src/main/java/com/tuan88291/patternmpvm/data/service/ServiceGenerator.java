@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.utils.retrofit;
+package com.tuan88291.patternmpvm.data.service;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

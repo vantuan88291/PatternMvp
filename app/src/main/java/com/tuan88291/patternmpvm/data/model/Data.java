@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.model.commondata;
+package com.tuan88291.patternmpvm.data.model;
 
 public class Data {
     String example;

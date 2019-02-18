@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.tuan88291.patternmpvm.BaseFragment;
-import com.tuan88291.patternmpvm.model.roomdata.DataRoom;
+import com.tuan88291.patternmpvm.data.entity.DataRoom;
 import com.tuan88291.patternmpvm.R;
-import com.tuan88291.patternmpvm.utils.room.livedata.MyViewModel;
+import com.tuan88291.patternmpvm.data.room.livedata.MyViewModel;
 import com.tuan88291.patternmpvm.databinding.HomeFragmentBinding;
 
 import java.util.List;

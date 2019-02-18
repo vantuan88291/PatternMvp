@@ -1,8 +1,8 @@
-package com.tuan88291.patternmpvm.utils.room;
+package com.tuan88291.patternmpvm.data.room;
 
 import android.content.Context;
 
-import com.tuan88291.patternmpvm.model.roomdata.DataRoom;
+import com.tuan88291.patternmpvm.data.entity.DataRoom;
 
 import androidx.room.Database;
 import androidx.room.Room;

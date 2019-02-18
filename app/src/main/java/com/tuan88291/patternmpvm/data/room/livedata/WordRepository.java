@@ -1,10 +1,10 @@
-package com.tuan88291.patternmpvm.utils.room.livedata;
+package com.tuan88291.patternmpvm.data.room.livedata;
 
 import android.app.Application;
 
-import com.tuan88291.patternmpvm.model.roomdata.DataRoom;
-import com.tuan88291.patternmpvm.utils.room.AppDatabase;
-import com.tuan88291.patternmpvm.utils.room.QueriesDao;
+import com.tuan88291.patternmpvm.data.entity.DataRoom;
+import com.tuan88291.patternmpvm.data.room.AppDatabase;
+import com.tuan88291.patternmpvm.data.room.QueriesDao;
 
 import java.util.List;
 

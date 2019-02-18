@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.utils.retrofit;
+package com.tuan88291.patternmpvm.data.service;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.Retrofit;

@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.model;
+package com.tuan88291.patternmpvm.data;
 
 public class DataMain {
     String example;
