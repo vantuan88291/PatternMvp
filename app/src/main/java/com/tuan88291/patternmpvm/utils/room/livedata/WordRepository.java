@@ -1,10 +1,10 @@
-package com.tuan88291.patternmpvm.Utils.Room.LiveData;
+package com.tuan88291.patternmpvm.utils.room.livedata;
 
 import android.app.Application;
 
-import com.tuan88291.patternmpvm.Model.RoomData.DataRoom;
-import com.tuan88291.patternmpvm.Utils.Room.AppDatabase;
-import com.tuan88291.patternmpvm.Utils.Room.Queries;
+import com.tuan88291.patternmpvm.model.roomdata.DataRoom;
+import com.tuan88291.patternmpvm.utils.room.AppDatabase;
+import com.tuan88291.patternmpvm.utils.room.QueriesDao;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import androidx.lifecycle.LiveData;
 import easy.asyntask.tuan88291.library.AsyncTaskEasy;
 
 public class WordRepository {
-    private Queries mQueries;
+    private QueriesDao mQueries;
     private LiveData<List<DataRoom>> mAllData;
 
     WordRepository(Application application) {

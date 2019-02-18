@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.Utils;
+package com.tuan88291.patternmpvm.utils;
 
 public class Common {
     public static final String DOMAIN = "http://google.com";

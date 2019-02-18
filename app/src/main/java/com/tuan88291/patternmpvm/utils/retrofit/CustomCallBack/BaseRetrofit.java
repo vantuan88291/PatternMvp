@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.Utils.Retrofit.CustomCallBack;
+package com.tuan88291.patternmpvm.utils.retrofit.CustomCallBack;
 
 import android.content.Context;
 import org.json.JSONObject;

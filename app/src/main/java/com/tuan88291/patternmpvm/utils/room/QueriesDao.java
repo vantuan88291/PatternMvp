@@ -1,6 +1,6 @@
-package com.tuan88291.patternmpvm.Utils.Room;
+package com.tuan88291.patternmpvm.utils.room;
 
-import com.tuan88291.patternmpvm.Model.RoomData.DataRoom;
+import com.tuan88291.patternmpvm.model.roomdata.DataRoom;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 
 @Dao
-public interface Queries {
+public interface QueriesDao {
 
     @Insert
     void insertData(DataRoom item);

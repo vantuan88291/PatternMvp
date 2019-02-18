@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.Utils;
+package com.tuan88291.patternmpvm.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 
 import com.tuan88291.patternmpvm.App;
 
-import static com.tuan88291.patternmpvm.Utils.Common.SHARED_PREFERENCE_NAME;
+import static com.tuan88291.patternmpvm.utils.Common.SHARED_PREFERENCE_NAME;
 
 
 public class SharedPrefs {

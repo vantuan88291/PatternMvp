@@ -1,6 +1,6 @@
-package com.tuan88291.patternmpvm.Model.CommonData;
+package com.tuan88291.patternmpvm.model;
 
-public class Data {
+public class DataMain {
     String example;
 
     public String getExample() {

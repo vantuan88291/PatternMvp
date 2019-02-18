@@ -1,13 +1,13 @@
-package com.tuan88291.patternmpvm.View.HomeFragment;
+package com.tuan88291.patternmpvm.view.homefragment;
 
 import android.content.Context;
 import android.widget.Toast;
 
-import com.tuan88291.patternmpvm.Model.CommonData.CommonData;
-import com.tuan88291.patternmpvm.Utils.Retrofit.ApiUtil;
-import com.tuan88291.patternmpvm.Utils.Retrofit.BaseInteractor;
-import com.tuan88291.patternmpvm.Utils.Retrofit.CallApi;
-import com.tuan88291.patternmpvm.Utils.Retrofit.CustomCallBack.BaseRetrofit;
+import com.tuan88291.patternmpvm.model.commondata.CommonData;
+import com.tuan88291.patternmpvm.utils.retrofit.ApiUtil;
+import com.tuan88291.patternmpvm.utils.retrofit.BaseInteractor;
+import com.tuan88291.patternmpvm.utils.retrofit.CallApi;
+import com.tuan88291.patternmpvm.utils.retrofit.CustomCallBack.BaseRetrofit;
 
 import retrofit2.Response;
 

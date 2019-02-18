@@ -1,6 +1,6 @@
-package com.tuan88291.patternmpvm.View.HomeFragment;
+package com.tuan88291.patternmpvm.view.homefragment;
 
-import com.tuan88291.patternmpvm.Model.RoomData.DataRoom;
+import com.tuan88291.patternmpvm.model.roomdata.DataRoom;
 
 import java.util.List;
 

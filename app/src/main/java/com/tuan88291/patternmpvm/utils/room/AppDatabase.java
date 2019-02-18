@@ -1,8 +1,8 @@
-package com.tuan88291.patternmpvm.Utils.Room;
+package com.tuan88291.patternmpvm.utils.room;
 
 import android.content.Context;
 
-import com.tuan88291.patternmpvm.Model.RoomData.DataRoom;
+import com.tuan88291.patternmpvm.model.roomdata.DataRoom;
 
 import androidx.room.Database;
 import androidx.room.Room;
@@ -13,7 +13,7 @@ public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase INSTANCE;
 
-    public abstract Queries queries();
+    public abstract QueriesDao queries();
 
     public static AppDatabase getAppDatabase(Context context) {
         if (INSTANCE == null) {
