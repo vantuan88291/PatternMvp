@@ -11,17 +11,17 @@ import java.util.List;
 import androidx.lifecycle.LiveData;
 import easy.asyntask.tuan88291.library.AsyncTaskEasy;
 
-public class WordRepository {
+public class WorkRepository {
     private QueriesDao mQueries;
     private LiveData<List<DataRoom>> mAllData;
 
-    WordRepository(Application application) {
+    WorkRepository(Application application) {
         AppDatabase db = AppDatabase.getAppDatabase(application);
         mQueries = db.queries();
         mAllData = mQueries.getAll();
     }
 
-    LiveData<List<DataRoom>> getAllWords() {
+    LiveData<List<DataRoom>> getAllData() {
         return mAllData;
     }
 

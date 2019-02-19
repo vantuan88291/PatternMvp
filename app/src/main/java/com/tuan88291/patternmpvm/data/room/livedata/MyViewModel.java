@@ -11,14 +11,14 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 public class MyViewModel extends AndroidViewModel {
-    private WordRepository mRepository;
+    private WorkRepository mRepository;
 
     private LiveData<List<DataRoom>> mAllWords;
 
     public MyViewModel (@NonNull Application application) {
         super(application);
-        mRepository = new WordRepository(application);
-        mAllWords = mRepository.getAllWords();
+        mRepository = new WorkRepository(application);
+        mAllWords = mRepository.getAllData();
     }
 
 
