@@ -53,15 +53,15 @@ public class HomeFragment extends BaseFragment implements HomeContract{
     }
 
     @Override
-    public void onSuccess() {
-        LogUtils.a("ok");
+    public void onLoadComplete() {
 
     }
 
     @Override
-    public void onError() {
-        LogUtils.a("Error");
+    public void onError(String mess) {
+
     }
+
 
     @Override
     public void onDataChange(List<DataRoom> data) {

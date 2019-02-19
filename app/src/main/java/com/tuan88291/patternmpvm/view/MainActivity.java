@@ -1,9 +1,11 @@
-package com.tuan88291.patternmpvm;
+package com.tuan88291.patternmpvm.view;
 
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.tuan88291.patternmpvm.BaseActivity;
+import com.tuan88291.patternmpvm.R;
 import com.tuan88291.patternmpvm.view.homefragment.HomeFragment;
 import com.tuan88291.patternmpvm.databinding.ActivityMainBinding;
 
@@ -77,7 +79,7 @@ public class MainActivity extends BaseActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            setFragment(new HomeFragment());
+            addFragment(new HomeFragment());
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
@@ -92,15 +94,5 @@ public class MainActivity extends BaseActivity
         binding.drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
-    private void setFragment(Fragment fragment) {
-        if (fragment != null) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.setCustomAnimations(android.R.anim.fade_in,
-                    android.R.anim.fade_out);
-            fragmentTransaction.replace(R.id.contentHome, fragment);
-            fragmentTransaction.addToBackStack(fragment.getClass().getSimpleName());
-            fragmentTransaction.commitAllowingStateLoss();
-        }
-    }
+
 }

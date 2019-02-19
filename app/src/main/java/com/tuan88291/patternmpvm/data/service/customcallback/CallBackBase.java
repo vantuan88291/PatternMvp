@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.data.service.CustomCallBack;
+package com.tuan88291.patternmpvm.data.service.customcallback;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.google.gson.Gson;

@@ -1,6 +1,9 @@
-package com.tuan88291.patternmpvm.data.service.CustomCallBack;
+package com.tuan88291.patternmpvm.data.service.customcallback;
 
 import android.content.Context;
+
+import com.blankj.utilcode.util.LogUtils;
+
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -23,16 +26,15 @@ public abstract class BaseRetrofit<T> {
                 public void onSuccess(Call<T> call, Response<T> response) {
                     if (response.isSuccessful()) {
                         try {
-                            if (response.code() == 401) {
-                                onFail(getMessage(response));
-                            } else {
                                 onGetApiComplete(response);
-                            }
                         } catch (Exception e) {
                             onFail(e.getLocalizedMessage());
+                            LogUtils.a("Exeption fire: "+e.toString());
                         }
                     }else {
                         onFail(getMessage(response));
+                        LogUtils.a("response not successful: "+response.toString());
+
                     }
                     onLoadComplete();
                 }
@@ -44,13 +46,14 @@ public abstract class BaseRetrofit<T> {
                     }else {
                         onFail(t.getLocalizedMessage());
                     }
-
+                    LogUtils.a("onError: "+t.toString());
                     onLoadComplete();
                 }
             });
 
         } else {
             onFail("callback can not be null");
+            LogUtils.a("callback null");
             onLoadComplete();
         }
 
@@ -63,6 +66,8 @@ public abstract class BaseRetrofit<T> {
             mess = jObjError.getString("message");
         } catch (Exception e) {
             mess = "Can not get message!";
+            LogUtils.a("Can not get message!", response.toString());
+
         }
         return mess;
     }
