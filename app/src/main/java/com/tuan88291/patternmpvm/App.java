@@ -1,4 +1,5 @@
 package com.tuan88291.patternmpvm;
+import com.blankj.utilcode.util.Utils;
 import com.google.gson.Gson;
 
 import androidx.multidex.MultiDex;
