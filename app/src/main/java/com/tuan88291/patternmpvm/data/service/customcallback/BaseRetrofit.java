@@ -12,9 +12,7 @@ import retrofit2.Call;
 import retrofit2.Response;
 
 public abstract class BaseRetrofit<T> {
-    private Context context;
-    public BaseRetrofit(Context context, Call callback){
-        this.context = context;
+    public BaseRetrofit(Call callback){
         getRetrofit(callback);
     }
 

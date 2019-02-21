@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.tuan88291.patternmpvm.BaseFragment;
@@ -36,8 +37,8 @@ public class HomeFragment extends BaseFragment implements HomeContract{
 
     @Override
     protected void viewCreated(View view, Bundle savedInstanceState) {
-        HomePresenter presenter = new HomePresenter(mContext(), this);
-        presenter.getApi();
+
+        getLifecycle().addObserver(HomePresenter.getInstance().setCallBack(this));
         binding.button.setOnClickListener(view1 -> {
 
             db.insert(new DataRoom("test", 1));
@@ -60,6 +61,7 @@ public class HomeFragment extends BaseFragment implements HomeContract{
     @Override
     public void onError(String mess) {
 
+        Toast.makeText(mContext(), mess, Toast.LENGTH_SHORT).show();
     }
 
 
@@ -67,5 +69,11 @@ public class HomeFragment extends BaseFragment implements HomeContract{
     public void onDataChange(List<DataRoom> data) {
         LogUtils.a(data.size());
 
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        getLifecycle().removeObserver(HomePresenter.getInstance().setCallBack(this));
     }
 }

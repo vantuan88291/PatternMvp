@@ -1,22 +1,36 @@
 package com.tuan88291.patternmpvm;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.tuan88291.patternmpvm.view.MainActivity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment implements BaseView{
     private MainActivity context;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void setErrorParent(Object data) {
+        new AlertDialog.Builder(context)
+                .setTitle("Your Alert")
+                .setMessage(data.toString())
+                .setCancelable(false)
+                .setPositiveButton("ok", (dialog, which) -> {
+
+                }).show();
     }
 
     @Nullable

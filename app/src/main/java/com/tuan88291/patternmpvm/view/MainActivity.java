@@ -6,6 +6,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.tuan88291.patternmpvm.BaseActivity;
 import com.tuan88291.patternmpvm.R;
+import com.tuan88291.patternmpvm.view.about.About;
 import com.tuan88291.patternmpvm.view.homefragment.HomeFragment;
 import com.tuan88291.patternmpvm.databinding.ActivityMainBinding;
 
@@ -81,6 +82,7 @@ public class MainActivity extends BaseActivity
         if (id == R.id.nav_camera) {
             addFragment(new HomeFragment());
         } else if (id == R.id.nav_gallery) {
+            addFragment(new About());
 
         } else if (id == R.id.nav_slideshow) {
 

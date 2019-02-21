@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends AppCompatActivity implements BaseView{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,5 +38,10 @@ public class BaseActivity extends AppCompatActivity {
             fragmentTransaction.addToBackStack(fragment.getClass().getSimpleName());
             fragmentTransaction.commitAllowingStateLoss();
         }
+    }
+
+    @Override
+    public void setErrorParent(Object data) {
+
     }
 }
