@@ -35,7 +35,7 @@ public class HomePresenter extends BaseInteractor implements LifecycleObserver, 
     @Override
     public void getApi() {
 
-        new BaseRetrofit<CommonData>(callAPi().getList()) {
+        new BaseRetrofit<CommonData>(callAPi().getList(), v) {
             @Override
             protected void onGetApiComplete(Response<CommonData> response) {
 
@@ -44,8 +44,6 @@ public class HomePresenter extends BaseInteractor implements LifecycleObserver, 
             @Override
             protected void onFail(String err) {
                 v.onError(err);
-
-                v.setErrorParent(err);
             }
 
             @Override

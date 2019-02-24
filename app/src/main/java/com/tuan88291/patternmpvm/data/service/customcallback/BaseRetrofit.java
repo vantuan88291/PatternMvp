@@ -3,6 +3,7 @@ package com.tuan88291.patternmpvm.data.service.customcallback;
 import android.content.Context;
 
 import com.blankj.utilcode.util.LogUtils;
+import com.tuan88291.patternmpvm.BaseView;
 
 import org.json.JSONObject;
 
@@ -12,11 +13,14 @@ import retrofit2.Call;
 import retrofit2.Response;
 
 public abstract class BaseRetrofit<T> {
-    public BaseRetrofit(Call callback){
+    BaseView view;
+
+    public BaseRetrofit(Call callback, BaseView view) {
         getRetrofit(callback);
+        this.view = view;
     }
 
-    private void getRetrofit(Call<T> callback){
+    private void getRetrofit(Call<T> callback) {
         onLoading();
         if (callback != null) {
             callback.enqueue(new CallBackBase<T>() {
@@ -24,14 +28,15 @@ public abstract class BaseRetrofit<T> {
                 public void onSuccess(Call<T> call, Response<T> response) {
                     if (response.isSuccessful()) {
                         try {
-                                onGetApiComplete(response);
+                            onGetApiComplete(response);
                         } catch (Exception e) {
                             onFail(e.getLocalizedMessage());
-                            LogUtils.a("Exeption fire: "+e.toString());
+                            LogUtils.a("Exeption fire: " + e.toString());
                         }
-                    }else {
+                    } else {
                         onFail(getMessage(response));
-                        LogUtils.a("response not successful: "+response.toString());
+                        view.setErrorParent(getMessage(response));
+                        LogUtils.a("response not successful: " + response.toString());
 
                     }
                     onLoadComplete();
@@ -41,10 +46,10 @@ public abstract class BaseRetrofit<T> {
                 public void onError(Call<T> call, Throwable t) {
                     if (t instanceof IOException) {
                         onFail("Check your network");
-                    }else {
+                    } else {
                         onFail(t.getLocalizedMessage());
                     }
-                    LogUtils.a("onError: "+t.toString());
+                    LogUtils.a("onError: " + t.toString());
                     onLoadComplete();
                 }
             });
@@ -56,7 +61,8 @@ public abstract class BaseRetrofit<T> {
         }
 
     }
-    private String getMessage(Response<T> response){
+
+    private String getMessage(Response<T> response) {
         String mess = "";
         try {
             String errorBody = response.errorBody().string();

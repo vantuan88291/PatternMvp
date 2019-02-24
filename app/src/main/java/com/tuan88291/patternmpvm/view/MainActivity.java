@@ -6,6 +6,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.tuan88291.patternmpvm.BaseActivity;
 import com.tuan88291.patternmpvm.R;
+import com.tuan88291.patternmpvm.data.model.Data;
 import com.tuan88291.patternmpvm.view.about.About;
 import com.tuan88291.patternmpvm.view.homefragment.HomeFragment;
 import com.tuan88291.patternmpvm.databinding.ActivityMainBinding;
@@ -16,6 +17,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,13 +27,14 @@ public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private ActivityMainBinding binding;
+    private Data item;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.executePendingBindings();
         setSupportActionBar(binding.appBar.toolbar);
-
+        item = ViewModelProviders.of(this).get(Data.class);
         binding.appBar.fab.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show());
 
@@ -42,6 +46,12 @@ public class MainActivity extends BaseActivity
         binding.navView.setNavigationItemSelectedListener(this);
     }
 
+    public void setItem(String it){
+        item.setExample(it);
+    }
+    public String getItem(){
+        return item.getExample();
+    }
     @Override
     public void onBackPressed() {
         if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {

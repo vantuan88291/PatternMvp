@@ -1,6 +1,8 @@
 package com.tuan88291.patternmpvm.data.model;
 
-public class Data {
+import androidx.lifecycle.ViewModel;
+
+public class Data extends ViewModel {
     String example;
 
     public String getExample() {

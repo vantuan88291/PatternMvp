@@ -68,6 +68,8 @@ public class HomeFragment extends BaseFragment implements HomeContract{
     @Override
     public void onDataChange(List<DataRoom> data) {
         LogUtils.a(data.size());
+        binding.button.setText(data.size()+"");
+        mContext().setItem(data.size()+"");
 
     }
 

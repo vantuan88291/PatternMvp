@@ -25,6 +25,7 @@ public class About extends BaseFragment implements AboutContract {
     protected void viewCreated(View view, Bundle savedInstanceState) {
 
         getLifecycle().addObserver(AboutPresenter.getInstance().setCallback(this));
+        binding.title.setText(mContext().getItem());
 
     }
 
