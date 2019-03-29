@@ -5,11 +5,12 @@ import android.app.Application;
 import com.tuan88291.patternmpvm.data.entity.DataRoom;
 import com.tuan88291.patternmpvm.data.room.AppDatabase;
 import com.tuan88291.patternmpvm.data.room.QueriesDao;
+import com.tuan88291.patternmpvm.utils.observe.AutoDisposable;
+import com.tuan88291.patternmpvm.utils.observe.ObserveEasy;
 
 import java.util.List;
 
 import androidx.lifecycle.LiveData;
-import easy.asyntask.tuan88291.library.AsyncTaskEasy;
 
 public class WorkRepository {
     private QueriesDao mQueries;
@@ -27,7 +28,13 @@ public class WorkRepository {
 
 
     public void insert (DataRoom data) {
-        new AsyncTaskEasy() {
+        new ObserveEasy() {
+
+            @Override
+            protected AutoDisposable getDispose() {
+                return null;
+            }
+
             @Override
             protected Object doBackground() {
                 mQueries.insertData(data);

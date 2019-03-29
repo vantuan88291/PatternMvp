@@ -12,6 +12,8 @@ import com.tuan88291.patternmpvm.data.entity.DataRoom;
 import com.tuan88291.patternmpvm.R;
 import com.tuan88291.patternmpvm.data.room.livedata.MyViewModel;
 import com.tuan88291.patternmpvm.databinding.HomeFragmentBinding;
+import com.tuan88291.patternmpvm.utils.observe.AutoDisposable;
+import com.tuan88291.patternmpvm.utils.observe.ObserveEasy;
 
 import java.util.List;
 
@@ -19,14 +21,17 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProviders;
 
-public class HomeFragment extends BaseFragment implements HomeContract{
+public class HomeFragment extends BaseFragment implements HomeContract {
     private MyViewModel db;
     private HomeFragmentBinding binding;
+    private AutoDisposable autoDisposable;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         db = ViewModelProviders.of(this).get(MyViewModel.class);
+        autoDisposable = new AutoDisposable();
+        autoDisposable.bindTo(this.getLifecycle());
     }
 
     @Override
@@ -45,7 +50,20 @@ public class HomeFragment extends BaseFragment implements HomeContract{
         });
 
         db.getAllData().observe(this, this::onDataChange);
+        new ObserveEasy() {
 
+            @Override
+            protected AutoDisposable getDispose() {
+                return autoDisposable;
+            }
+
+            @Override
+            protected Object doBackground() {
+
+                int a = 4 + 1;
+                return a;
+            }
+        };
     }
 
     @Override
@@ -68,8 +86,8 @@ public class HomeFragment extends BaseFragment implements HomeContract{
     @Override
     public void onDataChange(List<DataRoom> data) {
         LogUtils.a(data.size());
-        binding.button.setText(data.size()+"");
-        mContext().setItem(data.size()+"");
+        binding.button.setText(data.size() + "");
+        mContext().setItem(data.size() + "");
 
     }
 
