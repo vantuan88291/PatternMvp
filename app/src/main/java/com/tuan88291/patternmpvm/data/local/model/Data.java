@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.data.model;
+package com.tuan88291.patternmpvm.data.local.model;
 
 import androidx.lifecycle.ViewModel;
 

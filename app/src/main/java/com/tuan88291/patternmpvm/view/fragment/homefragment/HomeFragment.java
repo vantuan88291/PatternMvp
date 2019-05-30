@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.view.homefragment;
+package com.tuan88291.patternmpvm.view.fragment.homefragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,9 +8,9 @@ import android.widget.Toast;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.tuan88291.patternmpvm.BaseFragment;
-import com.tuan88291.patternmpvm.data.entity.DataRoom;
+import com.tuan88291.patternmpvm.data.local.entity.DataRoom;
 import com.tuan88291.patternmpvm.R;
-import com.tuan88291.patternmpvm.data.room.livedata.MyViewModel;
+import com.tuan88291.patternmpvm.data.local.room.livedata.MyViewModel;
 import com.tuan88291.patternmpvm.databinding.HomeFragmentBinding;
 import com.tuan88291.patternmpvm.utils.observe.AutoDisposable;
 import com.tuan88291.patternmpvm.utils.observe.ObserveEasy;

@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.view;
+package com.tuan88291.patternmpvm.view.activity;
 
 import android.os.Bundle;
 
@@ -6,18 +6,14 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.tuan88291.patternmpvm.BaseActivity;
 import com.tuan88291.patternmpvm.R;
-import com.tuan88291.patternmpvm.data.model.Data;
-import com.tuan88291.patternmpvm.view.about.About;
-import com.tuan88291.patternmpvm.view.homefragment.HomeFragment;
+import com.tuan88291.patternmpvm.data.local.model.Data;
+import com.tuan88291.patternmpvm.view.fragment.about.About;
+import com.tuan88291.patternmpvm.view.fragment.homefragment.HomeFragment;
 import com.tuan88291.patternmpvm.databinding.ActivityMainBinding;
 
 import androidx.core.view.GravityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.view.Menu;
@@ -42,8 +38,9 @@ public class MainActivity extends BaseActivity
                 this, binding.drawerLayout, binding.appBar.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         binding.drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-
         binding.navView.setNavigationItemSelectedListener(this);
+        addFragment(new HomeFragment());
+
     }
 
     public void setItem(String it){

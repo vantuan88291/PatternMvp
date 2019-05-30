@@ -1,7 +1,6 @@
-package com.tuan88291.patternmpvm.view.about;
+package com.tuan88291.patternmpvm.view.fragment.about;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

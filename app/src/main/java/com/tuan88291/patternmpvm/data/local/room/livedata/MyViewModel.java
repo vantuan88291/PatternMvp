@@ -1,8 +1,8 @@
-package com.tuan88291.patternmpvm.data.room.livedata;
+package com.tuan88291.patternmpvm.data.local.room.livedata;
 
 import android.app.Application;
 
-import com.tuan88291.patternmpvm.data.entity.DataRoom;
+import com.tuan88291.patternmpvm.data.local.entity.DataRoom;
 
 import java.util.List;
 

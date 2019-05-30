@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.data.service;
+package com.tuan88291.patternmpvm.data.remote;
 
 public abstract class BaseInteractor {
 

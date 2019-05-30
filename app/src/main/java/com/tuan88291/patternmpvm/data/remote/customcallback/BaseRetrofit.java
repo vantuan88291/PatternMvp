@@ -1,6 +1,4 @@
-package com.tuan88291.patternmpvm.data.service.customcallback;
-
-import android.content.Context;
+package com.tuan88291.patternmpvm.data.remote.customcallback;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.tuan88291.patternmpvm.BaseView;

@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.view.about;
+package com.tuan88291.patternmpvm.view.fragment.about;
 
 public interface AboutContract {
     void inCreate();

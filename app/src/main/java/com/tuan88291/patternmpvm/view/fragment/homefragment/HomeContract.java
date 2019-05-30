@@ -1,7 +1,7 @@
-package com.tuan88291.patternmpvm.view.homefragment;
+package com.tuan88291.patternmpvm.view.fragment.homefragment;
 
 import com.tuan88291.patternmpvm.BaseContract;
-import com.tuan88291.patternmpvm.data.entity.DataRoom;
+import com.tuan88291.patternmpvm.data.local.entity.DataRoom;
 
 import java.util.List;
 

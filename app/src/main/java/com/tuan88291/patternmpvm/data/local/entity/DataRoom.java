@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.data.entity;
+package com.tuan88291.patternmpvm.data.local.entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

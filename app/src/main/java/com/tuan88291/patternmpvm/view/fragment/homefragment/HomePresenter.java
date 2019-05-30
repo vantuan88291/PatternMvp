@@ -1,12 +1,10 @@
-package com.tuan88291.patternmpvm.view.homefragment;
+package com.tuan88291.patternmpvm.view.fragment.homefragment;
 
-import android.content.Context;
-
-import com.tuan88291.patternmpvm.data.model.CommonData;
-import com.tuan88291.patternmpvm.data.service.ApiUtil;
-import com.tuan88291.patternmpvm.data.service.BaseInteractor;
-import com.tuan88291.patternmpvm.data.service.CallApi;
-import com.tuan88291.patternmpvm.data.service.customcallback.BaseRetrofit;
+import com.tuan88291.patternmpvm.data.local.model.CommonData;
+import com.tuan88291.patternmpvm.data.remote.ApiUtil;
+import com.tuan88291.patternmpvm.data.remote.BaseInteractor;
+import com.tuan88291.patternmpvm.data.remote.CallApi;
+import com.tuan88291.patternmpvm.data.remote.customcallback.BaseRetrofit;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;

@@ -1,4 +1,4 @@
-package com.tuan88291.patternmpvm.view.about;
+package com.tuan88291.patternmpvm.view.fragment.about;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
